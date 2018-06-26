@@ -1,15 +1,17 @@
 var movies = [{
+        id: 1,
         title: 'Harry Potter',
         desc: 'film o czarodzieju'
     },
     {
+        id: 2,
         title: 'Król lew',
         desc: 'Film o królu sawanny'
     }
 ];
 
 var moviesElements = movies.map(function(movie) {
-    return React.createElement('li', {},
+    return React.createElement('li', {key: movie.id},
         React.createElement('h2', {}, movie.title),
         React.createElement('p', {}, movie.desc)
     );
